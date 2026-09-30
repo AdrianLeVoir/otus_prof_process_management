@@ -1,0 +1,35 @@
+    PID    PPID STAT COMMAND
+      1       0 S    /usr/lib/systemd/systemd --system --deserialize=70
+      2       0 S    [kthreadd]
+      3       2 S    [pool_workqueue_release]
+      4       2 I    [kworker/R-rcu_g]
+      5       2 I    [kworker/R-rcu_p]
+      6       2 I    [kworker/R-slub_]
+      7       2 I    [kworker/R-netns]
+      9       2 I    [kworker/0:0H-events_highpri]
+     12       2 I    [kworker/R-mm_pe]
+     13       2 I    [rcu_tasks_kthread]
+     14       2 I    [rcu_tasks_rude_kthread]
+     15       2 I    [rcu_tasks_trace_kthread]
+     16       2 S    [ksoftirqd/0]
+     17       2 I    [rcu_preempt]
+     18       2 S    [migration/0]
+     19       2 S    [idle_inject/0]
+     20       2 S    [cpuhp/0]
+     21       2 S    [cpuhp/1]
+     22       2 S    [idle_inject/1]
+...
+  40336       1 S    sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+  95325       1 S    nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx-first.conf -g daemon on; master_process on;
+  95326   95325 S    nginx: worker process                                                          
+  95327   95325 S    nginx: worker process                                                          
+  95328   95325 S    nginx: worker process                                                          
+  95329   95325 S    nginx: worker process                                                          
+  95390       1 S    nginx: master process /usr/sbin/nginx -c /etc/nginx/nginx-second.conf -g daemon on; master_process on;
+  95391   95390 S    nginx: worker process                                                           
+  95392   95390 S    nginx: worker process                                                           
+  95393   95390 S    nginx: worker process                                                           
+  95394   95390 S    nginx: worker process                                                           
+ 110316   40336 S    sshd: adrianl [priv]
+ 110364  110316 S    sshd: adrianl@notty 
+ 110365  110364 S    bash -c /tmp/myps.sh > /tmp/myps-out.txt 2>&1; head -20 /tmp/myps-out.txt; echo ...; grep -E 'sshd|nginx|watchlog|spawn' /tmp/myps-out.txt
